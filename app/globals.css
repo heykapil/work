@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+@import 'tailwindcss-animated';
+@layer base {
+  /* FONT DECLARATIONS */
+  @font-face {
+    font-family: 'linden hill';
+    src: url(https://cdn.kapil.app/fonts/LindenHill-Regular.woff2) format("woff2"),
+         url(https://cdn.kapil.app/fonts/LindenHill-Regular.woff) format("woff"),
+         url(https://cdn.kapil.app/fonts/LindenHill-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'linden hill';
+    src: url(https://cdn.kapil.app/fonts/LindenHill-Italic.woff2) format("woff2"),
+         url(https://cdn.kapil.app/fonts/LindenHill-Italic.woff) format("woff"),
+         url(https://cdn.kapil.app/fonts/LindenHill-Italic.otf) format("opentype");
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* Redefine CSS variables for use in tailwind.config.js or here */
+  :root {
+    --font-serif: "Linden Hill", serif;
+    --color-primary: #171717;
+    --color-query-0: #b1b960;
+    --color-query-1: #c2e6d3;
+    --color-query-2: #cfcca6;
+    --color-query-3: #94d659;
+    --color-query-4: #e1c4d9;
+    --color-query-5: #b7a170;
+    --color-white: #fafafa;
+    --tint: 300;
+    --light: 0%;
+    --saturation: 100%;
+    --color-background: var(--color-white);
+    --color-lightest-grey: rgb(245, 245, 245);
+    --color-lightest-grey: hsl(var(--tint), 0%, 88%);
+    --symbol-content: "❧";
+    --shadow-paper: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+    --shadow-main: var(--shadow-paper);
+    --shadow-paper: none;
+    --shadow-main: none;
+    --color-body: hsl(var(--tint), 0%, 23%);
+    --color-link: blue;
+    --color-paper: var(--color-background);
+    --color-accent: var(--color-grey);
+    --color-grey: #ddd;
+    --color-darkest-grey: #999;
+    --font-size: 1.2em;
+    --color-cropmark: black;
+    --color-highlight:yellow
+  }
+
+  /* BASE BODY STYLES */
+  body {
+    font-family: var(--font-serif);
+    font-size: 1.2em; /* Tailwind's `text-lg` or `text-xl` can also manage this */
+    line-height: 1.6;
+    color: var(--color-body);
+    letter-spacing: .2px;
+  }
+
+  /* Applying basic styles to headings that Tailwind resets */
+  h1 {
+    font-size: 2em; /* approx text-4xl */
+    font-weight: 700; /* bold */
+    margin: 0.67em 0;
+  }
+  h2 {
+    font-size: 1.5em; /* approx text-4xl */
+    font-weight: 700; /* bold */
+    margin: 0.56em 0;
+  }
+
+  h3 {
+    font-size: 1.25em; /* approx text-2xl or 3xl */
+    font-weight: 700; /* bold */
+    margin: 0.45em 0;
+  }
+  a {
+    color: var(--color-link);
+  }
+}
+
+a.no-color{
+  color: var(--color-body) !important;
+  text-decoration: none !important;
+}
