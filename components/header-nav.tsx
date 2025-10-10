@@ -200,7 +200,7 @@ export default function Header({ session }: { session: Session }) {
               </div>
               <div className="py-6">
                 <a
-                  href={session?.user?.username ? 'https://auth.kapil.app/logout?redirectTo=https://work.kapil.app' : 'https://auth.kapil.app/login?redirectTo=https://work.kapil.app'}
+                  href={session?.user?.username ? process.env.BETTER_AUTH_URL+'/logout?redirectTo=https://work.kapil.app' : process.env.BETTER_AUTH_URL+'/login?redirectTo=https://work.kapil.app'}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   {session?.user?.username ? 'Log out' : 'Login'}
