@@ -1,5 +1,6 @@
 'use client'
 
+import { Session } from '@/lib/auth'
 import {
   Dialog,
   DialogPanel,
@@ -29,7 +30,7 @@ const callsToAction = [
   { name: 'Report error', href: '#', icon: PhoneIcon },
 ]
 
-export default function Header() {
+export default function Header({ session }: { session: Session }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openPopOver, setOpenPopOver] = useState(false)
   return (
@@ -199,10 +200,10 @@ export default function Header() {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href={session?.user?.username ? 'https://auth.kapil.app/logout?redirectTo=https://work.kapil.app' : 'https://auth.kapil.app/login?redirectTo=https://work.kapil.app'}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  {session?.user?.username ? 'Log out' : 'Login'}
                 </a>
               </div>
             </div>

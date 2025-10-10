@@ -41,8 +41,6 @@ export async function middleware(request: NextRequest) {
       });
     }
   }
-
-  // Add this return statement
   return midResponse;
 }
 
