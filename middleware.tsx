@@ -41,9 +41,11 @@ export async function middleware(request: NextRequest) {
       });
     }
   }
+
+  // Add this return statement
   return midResponse;
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: ['/:path*'],
 };
