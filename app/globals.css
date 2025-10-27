@@ -19,11 +19,7 @@
   @font-face {
     font-family: 'System-Numbers';
     /* Use a broad system font stack for clean, simple numbers on any OS */
-    src: local("Segoe UI"), 
-         local("Roboto"),    
-         local("SF Pro Text"),
-         system-ui,           
-         sans-serif;          
+    src: src: local('Crimson Text'), url('https://fonts.gstatic.com/s/crimsontext/v19/wlp2gwHKFkZgtmSR3NB0oRJfbwhT.woff2') format('woff2');          
     /* Unicode range for digits 0-9 */
     unicode-range: U+30-39; 
   }
