@@ -16,10 +16,21 @@
     font-style: italic;
     font-weight: 400;
   }
+  @font-face {
+    font-family: 'System-Numbers';
+    /* Use a broad system font stack for clean, simple numbers on any OS */
+    src: local("Segoe UI"), 
+         local("Roboto"),    
+         local("SF Pro Text"),
+         system-ui,           
+         sans-serif;          
+    /* Unicode range for digits 0-9 */
+    unicode-range: U+30-39; 
+  }
 
   /* Redefine CSS variables for use in tailwind.config.js or here */
   :root {
-    --font-serif: "Linden Hill", serif;
+    --font-serif: 'System-Numbers', "Linden Hill", serif;
     --color-primary: #171717;
     --color-query-0: #b1b960;
     --color-query-1: #c2e6d3;
